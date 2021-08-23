@@ -40,20 +40,20 @@ select alunos.nome as "Aluno",
 	   from alunos
 	   full join aluno_curso on aluno_curso.aluno_id = alunos.id 
 	   full join cursos      on cursos.id            = aluno_curso.curso_id;
-	
+
 select alunos.nome as "Aluno",
 	   cursos.nome as "Cursando"
 	   from alunos
 	   cross join cursos;
-	  
+
 create table aluno_curso(
 	aluno_id integer,
 	curso_id integer,
 	primary key(aluno_id, curso_id),
-	
+
 	foreign key (aluno_id) references alunos (id)
 	on delete cascade,
-	
+
 	foreign key (curso_id) references cursos (id)
 	on delete cascade
 );
@@ -76,28 +76,4 @@ select alunos.nome as "Aluno",
 
 delete from alunos where id = 1;
 
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	 
-	  
-;
+; 
